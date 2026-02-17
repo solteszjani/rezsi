@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card">
+<h3>⚡ Villany számla részletek</h3>
+<table class="table">
+<tr><td>Teljes fogyasztás:</td><td>{{data.usage}} kWh</td></tr>
+<tr><td>Kedvezményes:</td><td>{{data.discounted_usage}} × {{data.price_limit}} Ft = {{data.discounted_cost}} Ft</td></tr>
+<tr><td>Piaci:</td><td>{{data.normal_usage}} × {{data.price_normal}} Ft = {{data.normal_cost}} Ft</td></tr>
+<tr><td>Alapdíj:</td><td>{{data.base_fee}} Ft</td></tr>
+<tr class="table-success"><td><b>Összesen:</b></td><td><b>{{data.total}} Ft</b></td></tr>
+</table>
+</div>
+{% endblock %}

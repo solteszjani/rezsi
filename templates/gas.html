@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card">
+<h3>🔥 Gáz kalkulátor</h3>
+<div class="alert alert-info">
+<b>Aktuális árak:</b><br>
+Kedvezményes: 102 Ft/m³<br>
+Piaci: 747 Ft/m³<br>
+Limit: 144 m³/hó<br>
+Alapdíj: 800 Ft
+</div>
+<form method="post" action="/calculate_gas">
+<label>Előző óraállás</label>
+<input class="form-control mb-2" name="previous">
+<label>Jelenlegi óraállás</label>
+<input class="form-control mb-2" name="current">
+<button class="btn btn-danger">Számítás</button>
+</form>
+</div>
+{% endblock %}

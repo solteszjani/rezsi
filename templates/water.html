@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card">
+<h3>💧 Víz kalkulátor</h3>
+<div class="alert alert-info">
+<b>Aktuális árak:</b><br>
+Kedvezményes: 600 Ft/m³<br>
+Piaci: 800 Ft/m³<br>
+Limit: 5 m³/hó<br>
+Alapdíj: 500 Ft
+</div>
+<form method="post" action="/calculate_water">
+<label>Előző óraállás</label>
+<input class="form-control mb-2" name="previous">
+<label>Jelenlegi óraállás</label>
+<input class="form-control mb-2" name="current">
+<button class="btn btn-info">Számítás</button>
+</form>
+</div>
+{% endblock %}

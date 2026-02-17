@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card">
+<h3>⚡ Villany kalkulátor</h3>
+<div class="alert alert-info">
+<b>Aktuális árak:</b><br>
+Kedvezményes: 36 Ft/kWh<br>
+Piaci: 70 Ft/kWh<br>
+Limit: 210 kWh/hó<br>
+Alapdíj: 900 Ft
+</div>
+<form method="post" action="/calculate_electric">
+<label>Előző óraállás</label>
+<input class="form-control mb-2" name="previous">
+<label>Jelenlegi óraállás</label>
+<input class="form-control mb-2" name="current">
+<button class="btn btn-warning">Számítás</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Admin panel</h3>
+<h4>💧 Víz számlák</h4>
+{% for bill in water %}
+<p>{{bill[1]}} - {{bill[4]}} m³ - {{bill[5]}} Ft <a href="/pdf/water/{{bill[0]}}">PDF</a></p>
+{% endfor %}
+<h4>🔥 Gáz számlák</h4>
+{% for bill in gas %}
+<p>{{bill[1]}} - {{bill[4]}} m³ - {{bill[5]}} Ft <a href="/pdf/gas/{{bill[0]}}">PDF</a></p>
+{% endfor %}
+<h4>⚡ Villany számlák</h4>
+{% for bill in electric %}
+<p>{{bill[1]}} - {{bill[4]}} kWh - {{bill[5]}} Ft <a href="/pdf/electric/{{bill[0]}}">PDF</a></p>
+{% endfor %}
+{% endblock %}
